@@ -1,12 +1,12 @@
 const express = require('express');
 const fs = require('fs');
-// const cors = require('cors');
+const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
 // cors es un middleware que permite que un servidor pueda recibir peticiones de otro servidor
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 const path = require("path");
