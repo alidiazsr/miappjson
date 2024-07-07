@@ -6,7 +6,15 @@ const PORT = 3000;
 
 // cors es un middleware que permite que un servidor pueda recibir peticiones de otro servidor
 
-app.use(cors());
+// Configura CORS
+app.use(cors({
+    origin: 'http://https://miappjson-pujd.vercel.app/' // Reemplaza con el dominio de tu frontend
+  }));
+
+
+
+
+
 app.use(express.json());
 
 const path = require("path");

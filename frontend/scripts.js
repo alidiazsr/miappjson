@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000';
+const apiUrl = 'http://https://miappjson-pujd.vercel.app/';
 
 // Manejo de Películas
 
