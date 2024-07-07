@@ -1,4 +1,4 @@
-const apiUrl = 'http://https://miappjson-pujd.vercel.app/';
+const apiUrl = 'https://miappjson-alicia-diazs-projects.vercel.app/';
 
 // Manejo de Películas
 
