@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Listado de Películas</h1>
+    <ul id="movie-list"></ul>
+
+
+    <button onclick="window.location.href='index.html'">Volver</button>
+
+    <script>
+        const apiUrl = 'http://localhost:3000';
+
+        function fetchMovies() {
+            fetch(`${apiUrl}/movies`)
+
+                .then(response => response.json())
+                .then(data => {
+                    const movieList = document.getElementById('movie-list');
+                    movieList.innerHTML = '';
+                    data.forEach(movie => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<strong>Pelicula: ${movie.title}</strong>`;
+                        li.innerHTML += `<br>Año: ${movie.year}`;
+                        li.innerHTML += `<br>Director:${movie.director}`;
+                        li.innerHTML += `<br>Genero: ${movie.genre}`;
+                        li.innerHTML += `<br>Imagen: <img src="${movie.image}" alt="Movie Imagen">`;
+                        
+                        movieList.appendChild(li);
+                    });
+                });
+        }
+        fetchMovies();
+    </script>
+</body>
+</html>

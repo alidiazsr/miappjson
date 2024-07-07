@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cac Movies</h1>
+    <div id="app">
+        <form id="movie-form">
+            <input type="text" id="movie-title" placeholder="Título" required>
+            <input type="text" id="movie-director" placeholder="Director" required>
+            <input type="number" id="movie-year" placeholder="Año" required>
+            <input type="text" id="movie-genre" placeholder="Género" required>            
+            <input type="url" id="movie-image" placeholder="Imagen URL" required>
+            <button type="submit">Agregar Película</button>
+        </form>
+        <ul id="movie-list"></ul>
+    </div>
+    <button onclick="window.location.href='movies.html'">Ver Películas</button>
+    <h2>Usuarios Registrados</h2>
+    <form id="register-form">
+        <input type="text" id="username" placeholder="Nombre" required>
+        <input type="text" id="lastname" placeholder="Apellido" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="date" id="birthday" placeholder="Fecha Nac" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+    </form>
+    <ul id="user-list"></ul>
+
+
+    <button onclick="window.location.href='users.html'">Ver Usuarios</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

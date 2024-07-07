@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Listado de Usuarios</h1>
+    <ul id="user-list"></ul>
+    <button onclick="window.location.href='index.html'">Volver</button>
+    <script>
+        const apiUrl = 'http://localhost:3000';
+
+        function fetchUsers() {
+
+            fetch(`${apiUrl}/users`)
+
+                .then(response => response.json())
+                .then(data => {
+                    const userList = document.getElementById('user-list');
+                    userList.innerHTML = '';
+                    data.forEach(user => {
+
+                        const li = document.createElement('li');
+                        li.innerHTML = `<strong>Nombre Completo: ${user.username} ${user.lastname}</strong>` ;
+                        li.innerHTML += `<br>E-mail: ${user.email}`;
+                        li.innerHTML += `<br>Fecha de Nacimiento: ${user.birthday}`;
+                                               
+                        userList.appendChild(li);
+                    });
+                });
+        }
+        fetchUsers();
+    </script>
+</body>
+</html>
