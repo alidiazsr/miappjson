@@ -1,15 +1,19 @@
 const express = require('express');
 const fs = require('fs');
-const cors = require('cors');
+// const cors = require('cors');
 const app = express();
 const PORT = 3000;
+
+const apiUrl = 'https://miappjson-alicia-diazs-projects.vercel.app';
 
 // cors es un middleware que permite que un servidor pueda recibir peticiones de otro servidor
 
 // Configura CORS
-app.use(cors({
-    origin: 'https://miappjson-alicia-diazs-projects.vercel.app' // Reemplaza con el dominio de tu frontend
-  }));
+// app.use((req, res, next) => {   
+//     origin: 'https://miappjson-alicia-diazs-projects.vercel.app' // Reemplaza con el dominio de tu frontend
+//   }));
+
+
 
 
 
