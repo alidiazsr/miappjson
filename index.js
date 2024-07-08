@@ -4,7 +4,7 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 
-const apiUrl = 'https://miappjson-alicia-diazs-projects.vercel.app';
+const apiUrl = 'https://miappjson-alicia-diazs-projects.vercel.app/';
 
 // cors es un middleware que permite que un servidor pueda recibir peticiones de otro servidor
 
