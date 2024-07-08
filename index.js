@@ -8,7 +8,7 @@ const PORT = 3000;
 
 // Configura CORS
 app.use(cors({
-    origin: 'https://miappjson-alicia-diazs-projects.vercel.app/' // Reemplaza con el dominio de tu frontend
+    origin: 'https://miappjson-alicia-diazs-projects.vercel.app' // Reemplaza con el dominio de tu frontend
   }));
 
 
